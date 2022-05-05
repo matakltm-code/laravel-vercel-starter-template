@@ -1,9 +1,9 @@
-import Vue from 'vue';
-import Vuex, { Store } from 'vuex'
-import { hydrate } from '@phased/state'
-Vue.use(Vuex)
+import Vue from "vue";
+import Vuex, { Store } from "vuex";
+import { hydrate } from "@phased/state";
+Vue.use(Vuex);
 
-import articles from './modules/articles';
+import articles from "./modules/articles";
 
 /**
  * Here we will 'hydrate' the vuex store. This does a few things
@@ -12,13 +12,15 @@ import articles from './modules/articles';
  * plugins that will handle retrieving the data from the controller
  * and updating the vuex state on page changes.
  */
-export const store = new Store(hydrate({
-    state: {
-        bio: null,
-        contact: null,
-        author: 'John Doe'
-    },
-    modules: {
-        articles
-    }
-}))
+export const store = new Store(
+    hydrate({
+        state: {
+            bio: null,
+            contact: null,
+            author: "Micheal Ataklt",
+        },
+        modules: {
+            articles,
+        },
+    })
+);
